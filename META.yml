@@ -1,7 +1,7 @@
 --- #YAML:1.0
 name:               Color-Mix
-version:            0.01
-abstract:           Generate simple color themes from an RGB wheel using HSV-to-RGB.
+version:            0.02
+abstract:           Generate themes from an RGB color wheel.
 author:
     - Lee Dalton <leedalton@gmail.com>
 license:            unknown
@@ -10,7 +10,8 @@ configure_requires:
     ExtUtils::MakeMaker:  0
 build_requires:
     ExtUtils::MakeMaker:  0
-requires:  {}
+requires:
+    Test::Warn:  0
 no_index:
     directory:
         - t

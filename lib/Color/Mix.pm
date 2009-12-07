@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use Carp;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub new {
     my ($class) = shift;
@@ -394,9 +394,9 @@ __END__
 =pod
 
 
-=head1 Color::Mix
+=head1 NAME
 
-Color::Mix - Generate simple color themes from an RGB wheel using HSV-to-RGB.
+Color::Mix - Generate themes from an RGB color wheel.
 
 
 =head1 SYNOPSIS
@@ -554,37 +554,37 @@ the yellow color into the darken method.
 
  my $hex = $color->get_color('limegreen'); # hex will be 32cd32
 
- If given a valid color name from the W3C X11 Colors list (Which is the
- same as the SVG 1.0 color list, return the RGB hex for the given
- color name. If a valid hex RGB number is given as a parameter it
- just returns it.
+If given a valid color name from the W3C X11 Colors list (Which is the
+same as the SVG 1.0 color list, return the RGB hex for the given
+color name. If a valid hex RGB number is given as a parameter it
+just returns it.
 
 
 =head2 get_color_list()
 
  my @colors = $color->get_color_list;
 
- This returns the valid list of named colors known to Color::Mix. The list
- was generated from W3C sites listing of X11 colors which are the same as
- the SVG 1.0 color list.
+This returns the valid list of named colors known to Color::Mix. The list
+was generated from W3C sites listing of X11 colors which are the same as
+the SVG 1.0 color list.
 
 
 =head2 set_shade()
 
  $color->set_shade(1);
 
- This alters the behavious of both the lighten and darken methods. By default
- Color::Mix makes this value 32 decimal which changes 000000 to 202020 using
- the lighten method. If we set the shade value to 1 decimal then making the
- same call would lighten 000000 to 010101.
+This alters the behavious of both the lighten and darken methods. By default
+Color::Mix makes this value 32 decimal which changes 000000 to 202020 using
+the lighten method. If we set the shade value to 1 decimal then making the
+same call would lighten 000000 to 010101.
 
 
 =head2 get_shade()
 
  my $current_shade = $color->get_shade;
 
- This method returns the current shade value that is being used. The default
- is 32, but can be changed by calling the set_shade method described above.
+This method returns the current shade value that is being used. The default
+is 32, but can be changed by calling the set_shade method described above.
 
 
 =head1 SEE ALSO
